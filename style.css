@@ -1,0 +1,757 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f0f1a;
+    overflow-x:hidden;
+    color:white;
+}
+
+/* Background Gradient */
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at top left,#ff4d8d33,transparent 30%),
+    radial-gradient(circle at bottom right,#7b61ff33,transparent 30%);
+    z-index:-1;
+}
+
+/* Hero Section */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    animation:heroAppear 2s ease;
+}
+
+/* Small Text */
+.subtitle{
+    font-size:1.2rem;
+    color:#ffb3d1;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+/* Main Title */
+.title{
+    font-size:5rem;
+    font-weight:700;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.title span{
+    display:block;
+    color:#ff4d8d;
+    text-shadow:0 0 20px #ff4d8d;
+}
+
+/* Description */
+.description{
+    max-width:600px;
+    color:#d1d1d1;
+    line-height:1.8;
+    margin-bottom:40px;
+    font-size:1.1rem;
+}
+
+/* Button */
+.btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff4d8d,#7b61ff);
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 0 20px #ff4d8d55;
+}
+
+/* Hover Effect */
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 20px #ff4d8d;
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+
+    .title{
+        font-size:3rem;
+    }
+
+    .description{
+        font-size:1rem;
+    }
+}
+
+/* Floating Hearts */
+.hearts::before,
+.hearts::after{
+    content:"❤️";
+    position:fixed;
+    font-size:20px;
+    animation:float 10s linear infinite;
+    opacity:0.6;
+}
+
+.hearts::before{
+    left:20%;
+    animation-delay:0s;
+}
+
+.hearts::after{
+    left:80%;
+    animation-delay:5s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+/* Memories Section */
+.memories{
+    min-height:100vh;
+    padding:100px 10%;
+    background:#111122;
+}
+
+/* Section Title */
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:60px;
+    color:#ff4d8d;
+}
+
+/* Gallery Layout */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* Card Design */
+.card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(10px);
+    transition:0.5s;
+    box-shadow:0 0 20px rgba(255,255,255,0.05);
+}
+
+/* Hover Animation */
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 30px rgba(255,77,141,0.3);
+}
+
+/* Image */
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+/* Image Hover */
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* Text */
+.card p{
+    padding:20px;
+    text-align:center;
+    font-size:1rem;
+    color:#f2f2f2;
+}
+
+/* Floating Hearts */
+.hearts::before,
+.hearts::after{
+    content:"❤️";
+    position:fixed;
+    font-size:20px;
+    animation:float 10s linear infinite;
+    opacity:0.6;
+}
+
+.hearts::before{
+    left:20%;
+    animation-delay:0s;
+}
+
+.hearts::after{
+    left:80%;
+    animation-delay:5s;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+/* Memories Section */
+.memories{
+    min-height:100vh;
+    padding:100px 10%;
+    background:#111122;
+}
+
+/* Section Title */
+.section-title{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:60px;
+    color:#ff4d8d;
+}
+
+/* Gallery Layout */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* Card Design */
+.card{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(10px);
+    transition:0.5s;
+    box-shadow:0 0 20px rgba(255,255,255,0.05);
+}
+
+/* Hover Animation */
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 30px rgba(255,77,141,0.3);
+}
+
+/* Image */
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+/* Text */
+.card p{
+    padding:20px;
+    text-align:center;
+    font-size:1rem;
+    color:#f2f2f2;
+}
+
+/* Stars Background */
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:40px 40px;
+    opacity:0.15;
+    animation:moveStars 80s linear infinite;
+    z-index:-2;
+}
+
+@keyframes moveStars{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-2000px);
+    }
+}
+
+.typing{
+    min-height:60px;
+    color:#ffffff;
+}
+
+.typed-cursor{
+    color:#ff4d8d;
+    font-size:1.2rem;
+}
+
+/* Loader */
+.loader{
+    position:fixed;
+    inset:0;
+    background:#0f0f1a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    transition:1s;
+}
+
+/* Loader Text */
+.loader h1{
+    color:#ff4d8d;
+    font-size:2rem;
+    animation:pulse 1.5s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.1);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* Heart Rain */
+.heart-rain{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* Hearts */
+.heart{
+    position:absolute;
+    top:-10%;
+    color:#ff4d8d;
+    animation:fall linear forwards;
+    opacity:0.7;
+}
+
+/* Falling Animation */
+@keyframes fall{
+
+    to{
+        transform:translateY(120vh);
+    }
+}
+
+/* Hero Animation */
+@keyframes heroAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Password Screen */
+.password-screen{
+    position:fixed;
+    inset:0;
+    background:#0f0f1a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+}
+
+/* Password Box */
+.password-box{
+    background:rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+}
+
+/* Input */
+.password-box input{
+    width:100%;
+    padding:15px;
+    margin:20px 0;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:1rem;
+}
+
+/* =========================
+   LOVE LETTER SECTION
+========================= */
+
+.letter-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+/* Letter Box */
+.letter{
+
+    width:100%;
+    max-width:700px;
+
+    background: linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.05));
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(12px);
+
+    padding:50px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 0 40px rgba(255,77,141,0.2);
+
+    transition:0.5s;
+}
+
+/* Hover Effect */
+.letter:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 0 60px rgba(255,77,141,0.4);
+
+}
+
+/* Letter Title */
+.letter h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:2.5rem;
+
+    color:#ff4d8d;
+
+    text-shadow:
+    0 0 10px #ff4d8d;
+
+}
+
+/* Letter Text */
+.letter p{
+
+    color:#f1f1f1;
+
+    line-height:2;
+
+    font-size:1.1rem;
+
+    text-align:left;
+}
+
+/* =========================
+   COUNTER SECTION
+========================= */
+
+.counter-section{
+
+    min-height:70vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:50px 20px;
+}
+
+/* Counter Heading */
+.counter-section h2{
+
+    font-size:3rem;
+
+    color:#ff4d8d;
+
+    margin-bottom:30px;
+
+    text-shadow:
+    0 0 15px #ff4d8d;
+}
+
+/* Counter Box */
+#counter{
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border:
+    1px solid rgba(255,255,255,0.1);
+
+    padding:30px 50px;
+
+    border-radius:25px;
+
+    font-size:2rem;
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 30px rgba(255,77,141,0.2);
+
+    transition:0.5s;
+}
+
+/* Hover Effect */
+#counter:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 50px rgba(255,77,141,0.4);
+}
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* Final Heading */
+.final-section h1{
+
+    font-size:6rem;
+
+    color:#ff4d8d;
+
+    text-shadow:
+    0 0 20px #ff4d8d,
+    0 0 40px #ff4d8d;
+
+    margin-bottom:20px;
+
+    animation:glow 2s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow{
+
+    from{
+        text-shadow:
+        0 0 10px #ff4d8d;
+    }
+
+    to{
+        text-shadow:
+        0 0 30px #ff4d8d,
+        0 0 60px #ff4d8d;
+    }
+}
+
+/* Final Text */
+.final-section p{
+
+    font-size:1.4rem;
+
+    color:#f1f1f1;
+
+    max-width:700px;
+
+    line-height:2;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .counter-section h2{
+
+        font-size:2rem;
+    }
+
+    #counter{
+
+        font-size:1.2rem;
+
+        padding:20px;
+    }
+
+    .final-section h1{
+
+        font-size:3rem;
+    }
+
+    .final-section p{
+
+        font-size:1rem;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .counter-section h2{
+
+        font-size:2rem;
+    }
+
+    #counter{
+
+        font-size:1.2rem;
+
+        padding:20px;
+    }
+
+    .final-section h1{
+
+        font-size:3rem;
+    }
+
+    .final-section p{
+
+        font-size:1rem;
+    }
+}
+
+/* Password Title */
+.password-box h2{
+
+    color:#ff4d8d;
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+
+    text-shadow:
+    0 0 10px #ff4d8d;
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+#musicBtn{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        45deg,
+        #ff4d8d,
+        #7b61ff
+    );
+
+    color:white;
+
+    font-size:1.5rem;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:
+    0 0 20px rgba(255,77,141,0.4);
+
+    transition:0.4s;
+}
+
+/* Hover */
+#musicBtn:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:
+    0 0 40px rgba(255,77,141,0.7);
+}
